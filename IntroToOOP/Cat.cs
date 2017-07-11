@@ -13,7 +13,7 @@ namespace IntroToOOP
         //They should always be named in Pascal case.
 
         //In OOP, there are two types of States:
-        //Fields - Variables that belong to a class
+        //Fields(camelCase) - Variables that belong to a class
         private string name;
         private int age;
         private string furColor;
@@ -22,9 +22,14 @@ namespace IntroToOOP
         //Properties - A sort of mix between a field and a method that alloow controlled access
         public string Name
         {
-            get {return this.name;}
+            get { return this.name; }
             set { this.name = value; }
-    }
+        }
+        public int Age
+        {
+            get { return this.age; }
+            set { this.age = value; }
+        }
 
         //We also have Behaviors.
         //Methods - repeatable or reusable sections of code - Actions
@@ -38,6 +43,8 @@ namespace IntroToOOP
             //This is an example of a default constructor. A default constructor takes no arguments/parameters.
         }
 
+        //Can have as many constructors as you need as long as they each have a unique signature.
+        //By signature, I mean the parameters in the parentheses after the constructor name.
         public Cat(string name, int age, string furColor)
         {
             this.name = name;
@@ -47,11 +54,11 @@ namespace IntroToOOP
 
         public void eat()
         {
-            if(isHungry)
+            if (isHungry)
             {
                 isHungry = false;
             }
-            Console.WriteLine("is the cat hungry? " + isHungry);
+            Console.WriteLine("Is the cat hungry? " + isHungry);
         }
 
     }

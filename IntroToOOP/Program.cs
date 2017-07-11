@@ -18,7 +18,17 @@ namespace IntroToOOP
 
             //The format we use to instantiate an object looks like this:
             //ClassName objectName = new ClassName();
-            Cat mittens = new Cat();
+            Cat firstCat = new Cat();
+
+            firstCat.Name = "Mittens";
+            //Console.WriteLine(firstCat.Age);
+
+            Cat secondCat = new Cat("Oz", 3, "Orange and White");
+            secondCat.Name = "Ozzy";
+            Console.WriteLine(secondCat.Name);
+            Console.WriteLine(secondCat.Age);
+            secondCat.eat();
+
             //To create a new object, we use a special method called a CONSTRUCTOR
             //Thinking about objects in real life, create (either hand-write or type) three examples of objects.
             //Your objects should have five states (characteristics) and five behaviors.
